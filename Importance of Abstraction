@@ -1,0 +1,32 @@
+abstract class Template{
+    public void addSugar() {
+        System.out.println("ADD sugar to tea or coffee");
+    }
+    public void addWater() {
+        System.out.println("ADD water to tea or coffee");
+    }
+    public void addMilk() {
+        System.out.println("ADD milk to tea or coffee");
+    }
+    protected abstract void addPrimary(); 
+}
+
+class Coffee extends Template{
+    protected void addPrimary() {
+        System.out.println("Coffee is added");    
+    }
+}
+
+class Tea extends Template{
+    protected void addPrimary(){
+        System.out.println("Tea is added");
+    }
+}
+
+public class HelloWorld{
+    public static void main(String args[]) {
+        Tea tea = new Tea();
+        tea.addPrimary();
+        tea.addSugar();
+    }
+}
