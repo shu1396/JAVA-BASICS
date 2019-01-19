@@ -1,0 +1,33 @@
+interface Logger{
+    public void execute(String message);
+}
+
+class LogToDatabase implements Logger {
+    public void execute(String message) {
+        System.out.println("Log to Database "+message);
+    }
+}
+
+class LogToFile implements Logger{
+    public void execute(String message) {
+        System.out.println("Log to File "+ message);
+    }
+}
+
+class Log {
+    Logger logger;
+    public Log(Logger logger) {
+        this.logger = logger;
+    }
+    
+    public void show() {
+        this.logger.execute("hello");
+    }
+}
+
+public class HelloWorld{
+    public static void main(String []args){
+        Log log = new Log(new LogToDatabase());
+        log.show();
+    }
+}
