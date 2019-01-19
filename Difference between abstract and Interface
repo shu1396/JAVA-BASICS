@@ -1,0 +1,13 @@
+Interface
+1. The variables are final by default and can be decalared as static.
+2. All methods are public should be public or by default.
+3. An interface can extend another interface.
+4. Java interface cannot be instantiated.
+5. Java interfaces are slow as it requires extra indirection.
+
+Abstract Class
+1. The variable may be non-final.
+2. Methods can be public, private and protected.
+3. Abstract class can extends another class and interfaces.
+4. It cannot be instantiated but can be invoked if main exists.
+5. Faster.
